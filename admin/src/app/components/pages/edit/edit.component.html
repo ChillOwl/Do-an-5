@@ -1,0 +1,53 @@
+<div class="col-12 grid-margin stretch-card" style="margin-left: 250px;width: 70%;">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Basic form elements</h4>
+        <p class="card-description"> Basic form elements </p>
+        <form  *ngFor="let game of games" [formGroup]="editForm" (ngSubmit)="submit()" class="forms-sample">
+            <div class="form-group">
+                <label for="exampleInputName1">Game Id</label>
+                <input type="text" class="form-control"  placeholder="{{ game.gameid }}" value="{{ game.gameid }}" formControlName="gameid" [readonly]="true"/>
+              </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Game Name:{{ game.gamename }}</label>
+            <input type="text" class="form-control"  placeholder="Name" formControlName="gamename"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail3">Price:{{ game.price }}</label>
+            <input type="text" class="form-control" placeholder="money" formControlName="price"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword4">Describtion:{{ game.describtion }}</label>
+            <input type="text" class="form-control"  placeholder="Describtion" formControlName="des"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Developer:{{ game.dev }}</label>
+            <input type="text" class="form-control" placeholder="Name" formControlName="dev"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">logo:{{ game.img_logo }}</label>
+            <input type="text" class="form-control"  placeholder="image" formControlName="logo"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">banner:{{ game.img_banner }}</label>
+            <input type="text" class="form-control"  placeholder="image" formControlName="banner"/>  
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot1:{{ game.img_ss1 }}</label>
+            <input type="text" class="form-control" placeholder="image" formControlName="ss1"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot2:{{ game.img_ss2 }}</label>
+            <input type="text" class="form-control" placeholder="image" formControlName="ss2"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot3:{{ game.img_ss3 }}</label>
+            <input type="text" class="form-control" placeholder="image" formControlName="ss3"/>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button class="btn btn-dark">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>

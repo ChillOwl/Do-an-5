@@ -1,0 +1,49 @@
+<div class="col-12 grid-margin stretch-card" style="margin-left: 250px;width: 70%;">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Basic form elements</h4>
+        <p class="card-description"> Basic form elements </p>
+        <form [formGroup]="createForm" (ngSubmit)="submit()" class="forms-sample">
+          <div class="form-group">
+            <label for="exampleInputName1">Game Name</label>
+            <input type="text" class="form-control"  placeholder="Name" formControlName="gamename"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail3">Price</label>
+            <input type="text" class="form-control" placeholder="money" formControlName="price"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword4">Describtion</label>
+            <input type="text" class="form-control"  placeholder="Password" formControlName="des"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Developer</label>
+            <input type="text" class="form-control" placeholder="Name" formControlName="dev"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">logo</label>
+            <input type="text" class="form-control"  placeholder="Location" formControlName="logo"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">banner</label>
+            <input type="text" class="form-control"  placeholder="Location" formControlName="banner"/>  
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot1</label>
+            <input type="text" class="form-control" placeholder="Location" formControlName="ss1"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot2</label>
+            <input type="text" class="form-control" placeholder="Location" formControlName="ss2"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputCity1">screenshot3</label>
+            <input type="text" class="form-control" placeholder="Location" formControlName="ss3"/>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button class="btn btn-dark">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>

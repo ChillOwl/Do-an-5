@@ -1,0 +1,71 @@
+
+<div class="l-body">
+  <script src="/src/assets/js/login_scripts.js">
+
+  </script>
+  <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+        <div class="title signup">Signup Form</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="field">
+              <input type="text" placeholder="Account name" formControlName="account"/>
+            </div>
+
+              <div class="err_list" *ngIf="fc.account.errors && isSubmitted">
+                  <div *ngIf="fc.account?.errors?.required">Should not be empty</div></div>
+              
+
+            <div class="field">
+              <input type="password" placeholder="Password" 
+              formControlName="password"/>
+            </div>
+            <div class="err_list" *ngIf="fc.password.errors && isSubmitted">  <div *ngIf="fc.password?.errors?.required">Should not be empty</div></div>
+            
+
+            <div class="pass-link"><a href="#">Forgot password?</a></div>
+
+            
+            <div class="field btn">
+
+              <div ></div>
+              <!-- <input type="submit" value="Login"> -->
+              <button class="btn-layer" type="submit">Login</button>
+            </div>
+            <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  
+  <script src="" async defer></script>
+
+     
+</div>
+    

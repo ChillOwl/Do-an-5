@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+          <div *ngIf="!router.url.startsWith('/search')" class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="most-popular">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4 *ngIf="!router.url.startsWith('/search')"><em>Most Popular</em> Right Now</h4>
+                  <h4 *ngIf="router.url.startsWith('/search')"><em>Search</em> Result</h4>
+                </div>
+                <div class="row">
+                  <ng-container *ngFor="let game of games;let i = index">
+                    <div *ngIf="i<8" class="col-lg-3 col-sm-6" >
+                      <a href="/detail/{{ game.gameid }}">
+                          <div class="item">
+                             
+                              <img class="logo" src="assets/images/{{ game.img_logo }}" alt="">                      
+                              <h4>{{ game.gamename }}<br><span>{{ game.price }}.đ</span></h4>
+                              <ul>
+                                <li><i class="fa fa-star"></i> 4.8</li>
+                                <li><i class="fa fa-download"></i> 2.3M</li>
+                              </ul>
+                              </div>
+                      </a>  
+                      </div>
+                  </ng-container>
+                  <div class="col-lg-12">
+                    <div class="main-button">
+                      <a href="browse.html">Discover Popular</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  

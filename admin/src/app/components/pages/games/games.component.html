@@ -1,0 +1,61 @@
+<div class="container-fluid page-body-wrapper">
+
+<app-header></app-header>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title"> Games</h3>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
+          </ol>
+        </nav>
+      </div>
+      
+      <div class="col-lg-24 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+            <p class="card-description">  
+              <a href="/create">
+                 Add <i style="color: rgb(2, 160, 15);" class=" mdi mdi-plus-circle"></i>
+              </a>
+              
+            </p>
+            <div class="table-responsive">
+              <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th> id </th>
+                    <th> Game name </th>
+                    <th> Price </th>
+                    <th> Dev </th>
+                    <th> Edit </th>
+                    <th> Delete </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let game of games">
+                    <td> {{ game.gameid }} </td>
+                    <td> {{ game.gamename }} </td>
+                    <td> {{ game.price }} </td>
+                    <td> {{ game.dev }} </td>
+                    <td> <a href="/edit/{{ game.gameid }}"><i style="color: rgb(7, 16, 186);" class="mdi mdi-grease-pencil"></i></a> </td>
+                    <td> <a href="javascript:void(0)" (click)="confirmDelete(game.gameid)"><i style="color: rgb(228, 30, 30);" class="mdi mdi-delete"></i></a> </td>
+                  </tr>
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+</div>
+
+
+

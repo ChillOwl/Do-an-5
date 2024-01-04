@@ -1,0 +1,87 @@
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Featured Games Start ***** -->
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="featured-games header-text">
+                <div class="heading-section">
+                   <a><h4><em>{{ cate }}</em> Games</h4> </a>
+                </div>
+                <div class="wraper">
+                  <div *ngFor="let game of games" class="item">
+                    <!-- <a href="/detail/{{ game.gameid }}"> -->
+                        <div class="thumb">
+                            <img src="assets/images/{{ game.img_logo }}" alt="">
+                            <div class="hover-effect">
+                              <h6>2.4K Streaming</h6>
+                            </div>
+                          </div>
+                           <a href="/detail/{{ game.gameid }}"><h4>{{ game.gamename }}<br></h4> </a>
+                          <ul>
+                            <li><i class="fa fa-star"></i> 4.8</li>
+                            <li><i class="fa fa-download"></i> 2.3M</li>
+                          </ul>
+                    <!-- </a> -->
+                    
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="top-downloaded">
+                <div class="heading-section">
+                   <h4><em>Pick</em> Category </h4>
+                </div>
+                <ul class="Categories">
+                  <li>                  
+                     <a href="/tag/moba"><h4>Moba</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/rpg"><h4>RPG</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/multiplayer"><h4>Multi-player</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/singleplayer"><h4>Single-player</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/casual"><h4>Casual</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/shooter"><h4>Shooter</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/firstperson"><h4>FPS</h4> </a>                   
+                  </li>
+                  <li>                  
+                     <a href="/tag/horror"><h4>Horror</h4> </a>                   
+                  </li>
+                 
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <!-- ***** Featured Games End ***** -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- <script src="../../../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../../../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../../../../assets/js/isotope.min.js"></script>
+  <script src="../../../../assets/js/owl-carousel.js"></script>
+  <script src="../../../../assets/js/tabs.js"></script>
+  <script src="../../../../assets/js/popup.js"></script>
+  <script src="../../../../assets/js/custom.js"></script>
+  <script src="../../../../assets/js/custom.js"></script> -->

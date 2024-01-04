@@ -1,0 +1,9 @@
+ <!-- ***** Search End ***** -->
+ <div class="search-input">
+    <div id="search">
+      <input #s type="text" placeholder="Type Something" (keyup.enter)="search(s.value)"
+      [value]="searchTerm" />
+      <i class="fa fa-search"></i>
+    </div>
+  </div>
+  <!-- ***** Search End ***** -->

@@ -1,0 +1,13 @@
+<div *ngIf="router.url !== '/login'" class="container-scroller">
+<!-- <app-header *ngIf="router.url !== '/login'  "></app-header> -->
+
+
+<app-sidebar *ngIf="router.url !== '/login'   "></app-sidebar>
+
+
+<router-outlet *ngIf="router.url !== '/login'  " ></router-outlet>
+
+
+</div>
+
+<router-outlet *ngIf="router.url == '/login' " ></router-outlet>
